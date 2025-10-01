@@ -1,0 +1,38 @@
+/* Importar Tailwind */
+@import "tailwindcss";
+
+/* ====== Estilos extras personalizados ====== */
+
+/* Animación de gradiente infinito */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 8s ease infinite;
+}
+
+/* Suavizar scroll entre secciones */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejor tipografía */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Hover efecto "glass" */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  border-radius: 1rem;
+}
