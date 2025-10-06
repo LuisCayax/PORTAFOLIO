@@ -10,7 +10,8 @@ export default function Portfolio() {
         "Web Developer",
         "Forensic Analyst",
         "Django & SQL",
-        "React & Next.js (aprendiendo)"
+        "Node.js & React",
+        "Next.js (aprendiendo)"
       ],
       typeSpeed: 70,
       backSpeed: 50,
@@ -64,27 +65,64 @@ export default function Portfolio() {
         >
           <h2 className="text-4xl font-bold mb-6 text-indigo-600">Sobre mí</h2>
           <p className="text-lg leading-relaxed">
-            Soy <b>Desarrollador Web</b> y <b>Analista Forense Informático</b> con experiencia en 
-            <b> Django</b>, <b>SQL</b> y desarrollo de sistemas de gestión. 
-            Me destaco por crear soluciones seguras, escalables y orientadas al usuario. 
-            Actualmente estoy fortaleciendo mis conocimientos en <b>Node.js</b>, <b>React.js</b> y <b>Next.js</b>.
+           Soy Ingeniero en Sistemas con pensum cerrado y actualmente curso la Maestría en Análisis Forense Informático.
+            Mi experiencia abarca el desarrollo web con Django, SQL, Node.js y React/Next.js, creando soluciones seguras, escalables y centradas en el usuario.
+
+            Mi formación en ciberseguridad y análisis forense me permite aportar un enfoque único al desarrollo de software, priorizando la calidad,
+            la seguridad y la resiliencia de las aplicaciones.
+
+            Me considero una persona con mentalidad analítica, orientada a resultados y al trabajo en equipo, con habilidades de comunicación efectiva y capacidad de aprendizaje continuo. Estoy motivado por contribuir en proyectos que generen valor y crecimiento para las empresas.
           </p>
         </motion.div>
       </section>
 
+      {/* Education Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-indigo-50 to-white">
+        <h2 className="text-4xl font-bold mb-12 text-center text-indigo-600">Formación Académica</h2>
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Ingeniería en Sistemas</h3>
+            <p className="text-gray-700">Pensum cerrado - Universidad Mariano Galvez de Guatemala</p>
+            <p className="text-sm text-gray-500">Enfocado en desarrollo de software y gestión de proyectos.</p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Maestría en Análisis Forense Informático</h3>
+            <p className="text-gray-700">4to trimestre - Universidad Mariano Galvez de Guatemala</p>
+            <p className="text-sm text-gray-500">Especialización en ciberseguridad, investigación digital y respuesta a incidentes.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Section */}
+      <section className="py-20 px-6 bg-gray-50">
+        <h2 className="text-4xl font-bold mb-12 text-center text-indigo-600">Lo que aporto</h2>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            { title: "Resolución de problemas", desc: "Experiencia en debugging y optimización de código." },
+            { title: "Trabajo en equipo", desc: "Colaboración en proyectos académicos y de desarrollo." },
+            { title: "Comunicación efectiva", desc: "Claridad en documentación, soporte y revisiones de código." }
+          ].map((item, i) => (
+            <div key={i} className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition">
+              <h3 className="text-xl font-semibold text-indigo-600 mb-2">{item.title}</h3>
+              <p className="text-gray-700">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-white to-gray-100">
-        <h2 className="text-4xl font-bold mb-12 text-center text-indigo-600">Habilidades</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center text-indigo-600">Habilidades Técnicas</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {[
-            "Python 🐍",
-            "Django ⚡",
-            "SQL 💾",
-            "JavaScript ✨",
-            "Git/GitHub 🔗",
             "Node.js 🚀",
             "React.js ⚛️",
-            "Next.js 🌐"
+            "Next.js 🌐",
+            "SQL 💾",
+            "Python 🐍",
+            "Django ⚡",
+            "Git/GitHub 🔗",
+            "Resolución de problemas 🛠️"
           ].map((skill, i) => (
             <motion.div 
               key={i}
@@ -109,32 +147,40 @@ export default function Portfolio() {
             <div className="p-6">
               <h3 className="text-2xl font-semibold mb-2">Sistema Web en Django</h3>
               <p className="mb-4 text-gray-700">
-                Proyecto en producción con autenticación, base de datos SQL y actualización en tiempo real. 
-                Desplegado en <b>Heroku</b> y <b>Hostinger</b>.
+               Desarrollé una aplicación web con autenticación de usuarios, base de datos SQL y actualización en tiempo real, desplegada en Heroku y Hostinger.
+
+                Este proyecto fue donado a una fundación que apoya a personas con discapacidad, con el objetivo de brindarles
+                una plataforma funcional y accesible que mejore su gestión interna y sus servicios.
               </p>
               <a href="https://ompedis.com" target="_blank" className="text-indigo-600 font-medium">Ver proyecto →</a>
-            </div>
-          </motion.div>
-
-          {/* Proyecto 2 */}
-          <motion.div whileHover={{ scale: 1.03 }} 
-            className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-            <img src="https://picsum.photos/600/301" alt="CRUD React" className="w-full h-48 object-cover"/>
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-2">CRUD en React</h3>
-              <p className="mb-4 text-gray-700">
-                Aplicación CRUD para gestionar tareas. Ejemplo de frontend moderno con React 
-                y consumo de API.
-              </p>
-              <a href="#" target="_blank" className="text-indigo-600 font-medium">Ver proyecto →</a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-6 text-center">
-        <p>© {new Date().getFullYear()} Luis Eduardo Cayax Pérez | Construido con ❤️ usando React + Tailwind</p>
+      {/* Future Projects */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-4xl font-bold mb-12 text-center text-indigo-600">En desarrollo</h2>
+        <div className="grid md:grid-cols-2 gap-12">
+          <motion.div whileHover={{ scale: 1.03 }} className="bg-white rounded-3xl shadow-lg p-6">
+            <h3 className="text-2xl font-semibold mb-2">Sistema de Barbería (MVP en Django)</h3>
+            <p className="text-gray-700 mb-4">
+              Aplicación en desarrollo con módulos de citas, usuarios y recordatorios. 
+              Pensado para expandirse a un SaaS.
+            </p>
+            <span className="text-gray-500 text-sm">Estado: En construcción 🚧</span>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer with CTA */}
+      <footer className="bg-gray-900 text-gray-300 py-10 text-center">
+        <p className="text-lg mb-4">¿Buscas un desarrollador comprometido y con visión?</p>
+        <a href="mailto:luiscayax230316@gmail.com"
+          className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:bg-indigo-700 transition">
+          Contáctame
+        </a>
+        <p className="mt-6 text-sm">© {new Date().getFullYear()} Luis Eduardo Cayax Pérez | Construido con ❤️ usando React + Tailwind</p>
       </footer>
     </div>
   );
